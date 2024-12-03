@@ -1,0 +1,114 @@
+                                                                                                                               
+┌──(kali㉿kali)-[~/Desktop]
+└─$ ls -al
+total 32
+drwxr-xr-x  3 kali kali 4096 Nov 30 10:44  .
+drwx------ 27 kali kali 4096 Dec  2 23:51  ..
+-rwxr-xr-x  1 kali kali 8519 Nov  5 19:30  brave-browser.desktop
+-rwxrwxr-x  1 kali kali  233 Nov 30 11:07 'Burpsuite Pro.desktop'
+-rwxrwxr-x  1 kali kali  708 Nov 13 10:31  code.desktop
+drw-rw-r--  5 kali kali 4096 Dec  3 00:10  CTF-Reports
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cd CTF-Reports      
+cd: permission denied: CTF-Reports
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop]
+└─$ chmod +x CTF-Reports 
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop]
+└─$ cd CTF-Reports      
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ ls    
+HackTheBox  Hello.txt  TryHackMe
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ cd TryHackMe/Easy 
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports/TryHackMe/Easy]
+└─$ ls -al
+total 36
+drwxrwxr-x 2 kali kali  4096 Dec  3 00:03 .
+drwxrwxr-x 5 kali kali  4096 Nov 30 11:07 ..
+-rw-rw-r-- 1 kali kali     6 Nov 30 11:07 Lookup.txt
+-rw-rw-r-- 1 kali kali 12503 Dec  3 00:03 mKingdom.txt
+-rw-rw-r-- 1 kali kali   650 Nov 30 11:50 The_Sticker_Shop.txt
+-rw-rw-r-- 1 kali kali    10 Nov 30 11:10 Whiterose.txt
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports/TryHackMe/Easy]
+└─$ cd ../../        
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ nano hello1.txt            
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git add hello1.txt  
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git commit -m "Fix file permissions for Hello.txt1"
+
+[main e04e332] Fix file permissions for Hello.txt1
+ 1 file changed, 3 insertions(+)
+ create mode 100644 hello1.txt
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git push origin main                               
+To github.com:Cyberpunk-010/CTF-Reports.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:Cyberpunk-010/CTF-Reports.git'
+hint: Updates were rejected because the remote contains work that you do not                                                                  
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git pull --rebase origin main                     
+
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 11 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (11/11), 3.61 KiB | 739.00 KiB/s, done.
+From github.com:Cyberpunk-010/CTF-Reports
+ * branch            main       -> FETCH_HEAD
+   40fcc87..36073d5  main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git push origin main         
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 397 bytes | 397.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:Cyberpunk-010/CTF-Reports.git
+   36073d5..8eb822b  main -> main
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ ls    
+HackTheBox  hello1.txt  Hello.md  Hello.txt  ii.txt  mkingdom.txt  TryHackMe
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git add mkingdom.txt 
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git commit -m "Fix file permissions for Hello.txt12"
+
+[main 1a0ca79] Fix file permissions for Hello.txt12
+ 1 file changed, 374 insertions(+)
+ create mode 100644 mkingdom.txt
+                                                                                                                                              
+┌──(kali㉿kali)-[~/Desktop/CTF-Reports]
+└─$ git push origin main                                
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 4.23 KiB | 4.23 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Cyberpunk-010/CTF-Reports.git
+   8eb822b..1a0ca79  main -> main
